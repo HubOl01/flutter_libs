@@ -70,7 +70,7 @@ var app = await path_provider.getApplicationDocumentsDirectory();
   var box = await Hive.openBox(storage_name);
   isShowOnboarding = box.get('isShowOnboarding') ?? true;
 ```
-Хранение и измменение я обычно пишу в отдельном файле `storage.dart`
+Хранение и изменение я обычно пишу в отдельном файле `storage.dart`
 
 Пример кода:
 ```dart
@@ -125,6 +125,7 @@ flutter pub run flutter_launcher_icons:main
 flutter pub add google_fonts
 ```
 Плагин для установки шрифта, можно проверить нужный шрифт по этой ссылке https://fonts.google.com/, а если нет придется вручную искать и устанавливать нужный шрифт так:
+
 В `pubspec.yaml`
 ```yaml
   fonts:
