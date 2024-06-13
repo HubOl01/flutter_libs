@@ -21,6 +21,12 @@ flutter pub add cupertino_icons
 flutter pub add get
 ```
 
+### [cupertino_icons](https://pub.dev/packages/flutter_bloc)
+
+```sh
+flutter pub add flutter_bloc
+```
+
 ### [intl](https://pub.dev/packages/intl)
 ```sh
 flutter pub add intl
