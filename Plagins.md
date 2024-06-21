@@ -139,6 +139,21 @@ flutter pub add google_fonts
       fonts:
         - asset: assets/fonts/ClashDisplay-Medium.otf
 ```
+или так
+```yaml
+  fonts:
+    - family: Schyler
+      fonts:
+        - asset: fonts/Schyler-Regular.ttf
+        - asset: fonts/Schyler-Italic.ttf
+          style: italic
+    - family: Trajan Pro
+      fonts:
+        - asset: fonts/TrajanPro.ttf
+        - asset: fonts/TrajanPro_Bold.ttf
+          weight: 700
+```
+
 и в dart
 ```dart
 TextStyle text32w500 = TextStyle(
