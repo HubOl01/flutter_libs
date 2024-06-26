@@ -38,4 +38,9 @@ CupertinoTabView(
  Navigator.of(context, rootNavigator: false).push(CupertinoPageRoute(builder: (context) => Page2()));
 ```
 
+для выхода назад
+```dart
+Navigator.of(context, rootNavigator: false).pop(),
+```
+
 Источник: https://stackoverflow.com/questions/49628510/flutter-keep-bottomnavigationbar-when-push-to-new-screen-with-navigator
