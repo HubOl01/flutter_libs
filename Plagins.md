@@ -118,7 +118,7 @@ flutter pub add flutter_launcher_icons
 flutter_launcher_icons:
   android: true
   ios: true
-  image_path: assets/others/app_icon.png
+  image_path: assets/app_icon.png
 ```
 
 Чтобы подтвердить изменения пишем в терминале
