@@ -44,3 +44,33 @@ Navigator.of(context, rootNavigator: false).pop(),
 ```
 
 Источник: https://stackoverflow.com/questions/49628510/flutter-keep-bottomnavigationbar-when-push-to-new-screen-with-navigator
+
+
+## Текст с границами 
+как на примере <img width="160" alt="image" src="https://github.com/user-attachments/assets/e9ea061c-1adf-4333-92ee-d8213f9166b1">
+
+```dart
+Stack(
+                        alignment: Alignment.center,
+                        children: [
+                          Text(
+                            "Adds free!".toUpperCase(),
+                            style: TextStyle(
+                              fontFamily: fontFamily,
+                              fontWeight: FontWeight.w400,
+                              fontSize: 20,
+                              foreground: Paint()
+                                ..style = PaintingStyle.stroke
+                                ..strokeWidth = 2
+                                ..color = Colors.black.withOpacity(.5),
+                            ),
+                            textAlign: TextAlign.center,
+                          ),
+                          Text(
+                            "Adds free!".toUpperCase(),
+                            style: TextStyles.text20w400SB,
+                            textAlign: TextAlign.center,
+                          ),
+                        ],
+                      ),
+```
