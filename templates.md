@@ -109,6 +109,7 @@ class DBHelper {
     final idType = 'INTEGER PRIMARY KEY AUTOINCREMENT';
     final textType = 'TEXT';
     final intType = 'INTEGER';
+    final doubleType = 'REAL';
     await db.execute('''
             CREATE TABLE ${tableName}(
               ${UserTrees.id} ${idType},
