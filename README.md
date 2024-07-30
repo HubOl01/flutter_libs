@@ -6,6 +6,13 @@ Library for storing components, templates, plugins and etc
 ```sh
 flutter create <name_project>
 ```
+или
+
+Создание проекта только на android, ios
+```sh
+flutter create --platform android,ios <name_project>
+```
+<br>
 
 `main.dart` может выглядеть так
 
