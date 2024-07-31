@@ -199,3 +199,64 @@ GestureDetector(
                                               },
 ...
 ```
+
+## Тень svg-изображения
+```dart
+Stack(
+      children: [
+        Positioned(
+          top: 4,
+          child: SvgPicture.asset(
+            assetPath,
+            width: width,
+            colorFilter: ColorFilter.mode(
+                Colors.black.withOpacity(0.3), BlendMode.srcIn),
+          ),
+        ),
+        Positioned(
+          top: 4,
+          child: ClipPath(
+            clipper: _InnerShadowClipper(),
+            child: BackdropFilter(
+              filter: ui.ImageFilter.blur(sigmaX: 4, sigmaY: 4),
+              child: SvgPicture.asset(
+                assetPath,
+                width: width,
+                colorFilter:
+                    const ColorFilter.mode(Colors.transparent, BlendMode.srcIn),
+              ),
+            ),
+          ),
+        ),
+        SvgPicture.asset(
+          assetPath,
+          width: width,
+        ),
+      ],
+    )
+```
+
+## Блюр на примере с алертом
+```dart
+Stack(
+      fit: StackFit.expand,
+      children: [
+        BackdropFilter(
+            filter: ImageFilter.blur(sigmaX: 5, sigmaY: 5),
+            child: GestureDetector(
+          onTap: ()=> Get.back(),
+          child: Container(
+              color: Colors.black.withOpacity(.2),
+            ),
+          ),
+        ),
+        Dialog(
+          backgroundColor: Colors.transparent,
+            // shape:
+                // RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
+            insetPadding: const EdgeInsets.all(20.0),
+            alignment: Alignment.center,
+            child: child),
+      ],
+    )
+```
