@@ -260,3 +260,14 @@ Stack(
       ],
     )
 ```
+
+## Градиент текста
+как на примере <img width="170" alt="image" src="https://github.com/user-attachments/assets/2133cbb0-c17c-408f-8826-fdc7707c7194">
+
+```dart
+style: TextStyles.text54w300.copyWith(foreground: Paint()..shader = LinearGradient(
+                    colors: <Color>[yellowColor, greenColor],
+                  ).createShader(const Rect.fromLTWH(0.0, 0.0, 200.0, 100.0)))),
+```
+
+Источник: https://stackoverflow.com/questions/51686868/gradient-text-in-flutter
