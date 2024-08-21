@@ -271,3 +271,15 @@ style: TextStyles.text54w300.copyWith(foreground: Paint()..shader = LinearGradie
 ```
 
 Источник: https://stackoverflow.com/questions/51686868/gradient-text-in-flutter
+
+## Листание свайпом по экрану
+```dart
+ GestureDetector(
+                onHorizontalDragEnd: (details) {
+                  if (details.primaryVelocity! > 0) {
+                    _goToPrevious();
+                  } else if (details.primaryVelocity! < 0) {
+                    _goToNext();
+                  }
+                },
+```
