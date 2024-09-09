@@ -193,6 +193,35 @@ style: TextStyles.text54w300.copyWith(foreground: Paint()..shader = LinearGradie
 
 Источник: https://stackoverflow.com/questions/51686868/gradient-text-in-flutter
 
+## Градиент SvgPicture
+как на примере <img width="55" alt="image" src="https://github.com/user-attachments/assets/268d8a40-f07c-45ad-824f-a77f7f28b34e">
+
+```dart
+ShaderMask(
+                              shaderCallback: (bounds) {
+                                return LinearGradient(
+                                        begin: Alignment.topCenter,
+                                        end: Alignment.bottomCenter,
+                                        colors: index == 0
+                                            ? [
+                                                const Color(0xFF90D6EB),
+                                                const Color(0xFF43A6C5),
+                                              ]
+                                            : [
+                                                IconColors.unselected,
+                                                IconColors.unselected
+                                              ])
+                                    .createShader(bounds);
+                              },
+                              child: SvgPicture.asset(
+                                upper1[0].asset,
+                                colorFilter: const ColorFilter.mode(
+                                    Colors.white, BlendMode.srcIn),
+                              ),
+                            )
+```
+
+
 ## Листание свайпом по экрану
 ```dart
  GestureDetector(
