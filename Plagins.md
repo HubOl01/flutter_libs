@@ -10,6 +10,11 @@ flutter pub add <plugin>
 ## Плагины
 Полная библиотека плагинов по этой ссылке https://pub.dev/
 
+### Full plagins
+```sh
+flutter pub add get flutter_bloc google_fonts flutter_svg hive path_provider flutter_launcher_icons 
+```
+
 ### [cupertino_icons](https://pub.dev/packages/cupertino_icons)
 
 ```sh
