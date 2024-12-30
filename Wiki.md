@@ -233,3 +233,30 @@ ShaderMask(
                   }
                 },
 ```
+
+## парсер всего текста более 200 строк
+
+Если нужно сделать автоматизацию текста более 200 повторяющихся по свойству в список моделей dart, то нужно на python писать
+```py
+import re
+
+# Input data
+data = """
+● Think Like a Wizard’s Clock: Plan your day in blocks, visualizing tasks as time segments.
+● Write in Your Spellbook: Keep a journal or planner to track tasks and ideas.
+● Brew Your Morning Elixir: Start your day with a drink that energizes you, like coffee or
+tea.
+"""
+
+# Extract advice and format
+advices = []
+
+for match in re.finditer(r"\u25cf\s*(.*?):\s*(.*)", data):
+    title = match.group(1).strip().replace('"', "'")
+    desc = match.group(2).strip().replace('"', "'")
+    advices.append(f'AdviceModel(title: "{title}", desc: "{desc}"),')
+
+# Join and display the output
+output = "\n".join(advices)
+print(output)
+```
