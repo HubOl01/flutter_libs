@@ -5,14 +5,24 @@
 flutter pub add <plugin>
 ```
 
+## Полный pubspec.yaml
+[[templates/pubspec.yaml]]
+
 И после него добавляем плагины
 
 ## Плагины
 Полная библиотека плагинов по этой ссылке https://pub.dev/
 
+
 ### Full plagins
+с google_fonts
 ```sh
 flutter pub add get flutter_bloc google_fonts flutter_svg hive path_provider flutter_launcher_icons 
+```
+
+без google_fonts
+```sh
+flutter pub add get flutter_bloc flutter_svg hive path_provider flutter_launcher_icons 
 ```
 
 ### [cupertino_icons](https://pub.dev/packages/cupertino_icons)
