@@ -8,8 +8,10 @@ flutter pub add <plugin>
 ## Полный шаблон pubspec.yaml
 с примерами fonts
 [pubspec.yaml](templates/pubspec.yaml)
+
 без fonts
 [pubspec.yaml](templates/pubspec1.yaml)
+
 
 И после него добавляем плагины
 
