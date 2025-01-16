@@ -304,7 +304,7 @@ scheduledTime: thought.dateTimeThink,
 - [templates/DatePickerWidget.dart](templates/DatePickerWidget.dart)
 
 ## Текст с разными цветами или стилями
-<img width="300" alt="image" src="https://github.com/user-attachments/assets/d72bcac6-5e5c-4aa8-a3b8-020c49d35159">
+<img width="300" alt="image" src="https://github.com/user-attachments/assets/4ed05e85-fd87-41ef-850c-9c498039abd9" />
 
 ```dart
 Text.rich(TextSpan(
