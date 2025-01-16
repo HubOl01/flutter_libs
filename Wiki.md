@@ -260,3 +260,37 @@ for match in re.finditer(r"\u25cf\s*(.*?):\s*(.*)", data):
 output = "\n".join(advices)
 print(output)
 ```
+
+## Создание уведомлений
+
+Сам сервис уведомлений есть в [core/notific.dart](core/notific.dart)
+
+1. Добавляем разрешения в Info.plist
+```
+<key>UIBackgroundModes</key>
+		<array>
+			<string>fetch</string>
+			<string>remote-notification</string>
+		</array>
+		<key>NSUserTrackingUsageDescription</key>
+		<string>This identifier will be used to deliver personalized ads to you.</string>
+		<key>NSAppTransportSecurity</key>
+		<dict>
+			<key>NSAllowsArbitraryLoads</key>
+			<true />
+		</dict>
+```
+2. Добавляем в main.dart если уведомление с таймером
+```dart
+tz.initializeTimeZones();
+```
+3. Запуск уведомления
+```dart
+await NotificationService.initialize();
+
+await NotificationService.scheduleNotification(
+title: "Internal: Mirror of thought",
+body: "The time for reflection has ended.",
+scheduledTime: thought.dateTimeThink,
+);
+```
