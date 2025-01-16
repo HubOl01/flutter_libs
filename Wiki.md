@@ -302,3 +302,21 @@ scheduledTime: thought.dateTimeThink,
 
 - [templates/TimePickerWidget.dart](templates/TimePickerWidget.dart)
 - [templates/DatePickerWidget.dart](templates/DatePickerWidget.dart)
+
+## Текст с разными цветами или стилями
+<img width="300" alt="image" src="https://github.com/user-attachments/assets/d72bcac6-5e5c-4aa8-a3b8-020c49d35159">
+```dart
+Text.rich(TextSpan(
+                          text:
+                              'Immerse yourself in the wonderful world of birds with '
+                                  .toUpperCase(),
+                          style: TextStyles.text21w800
+                              .copyWith(color: TextColors.textPrimary),
+                          children: <InlineSpan>[
+                            TextSpan(
+                              text: 'Wingsej: flights and more'.toUpperCase(),
+                              style: TextStyles.text21w800
+                                  .copyWith(color: TextColors.textSecond),
+                            )
+                          ])),
+```
