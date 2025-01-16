@@ -294,3 +294,11 @@ body: "The time for reflection has ended.",
 scheduledTime: thought.dateTimeThink,
 );
 ```
+
+## TimePicker/DatePicker 
+<img width="300" alt="image" src="https://github.com/user-attachments/assets/d5dc9196-5982-4e59-b21a-77bf3169e6ae">
+
+Шаблоны в файлах
+
+- [templates/TimePickerWidget.dart](templates/TimePickerWidget.dart)
+- [templates/DatePickerWidget.dart](templates/DatePickerWidget.dart)
