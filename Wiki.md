@@ -305,6 +305,7 @@ scheduledTime: thought.dateTimeThink,
 
 ## Текст с разными цветами или стилями
 <img width="300" alt="image" src="https://github.com/user-attachments/assets/d72bcac6-5e5c-4aa8-a3b8-020c49d35159">
+
 ```dart
 Text.rich(TextSpan(
                           text:
