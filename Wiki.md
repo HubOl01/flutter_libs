@@ -321,3 +321,43 @@ Text.rich(TextSpan(
                             )
                           ])),
 ```
+
+## Работа с БД и bloc
+
+- Полный образец model в: [core/models/favoriteModel.dart](core/models/favoriteModel.dart)
+- Полный образец database в: [core/data/database.dart](core/data/database.dart)
+- Полный образец repository в: [core/repositories/FavoriteRepository.dart](core/repositories/FavoriteRepository.dart)
+- Полный образец bloc в: [core/bloc](core/bloc)
+
+Подключаем bloc так
+```dart
+...
+BlocProvider(
+      create: (context) => FavoriteBloc(FavoriteRepository()),
+      child: ...
+```
+
+Если нужно сразу заполнить данные то 
+
+```dart
+Future<void> populateDatabase(FavoriteRepository favoriteRepository) async {
+  final dataSQL = await favoriteRepository.getAll();
+
+  if (dataSQL.isEmpty) {
+    for (var model in listTree) {
+      await favoriteRepository.insert(FavoriteModel(title: model));
+    }
+    print('Данные успешно добавлены в базу.');
+  } else {
+    print('База данных уже заполнена.');
+  }
+}
+
+Future main() async {
+  ...
+  final favoriteRepository = FavoriteRepository();
+  await populateDatabase(favoriteRepository);
+
+  ...
+}
+```
