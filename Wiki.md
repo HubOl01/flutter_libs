@@ -361,3 +361,31 @@ Future main() async {
   ...
 }
 ```
+
+Реализация
+```dart
+ BlocBuilder<FavoriteBloc, FavoriteState>(
+              builder: (context, state) {
+                if (state is FavoriteLoading) {
+                  return Center(child: CircularProgressIndicator());
+                } else if (state is FavoriteLoaded) {
+                  if (state.favorites.isEmpty) {
+                    return SizedBox();
+                  }
+                  return ListView.builder(
+                      padding: EdgeInsets.only(top: 16, bottom: 32),
+                      itemCount: state.favorites.length,
+                      itemBuilder: (context, index) {
+                        return state.favorites[index].isFavorite == 0
+                            ? const SizedBox()
+                            : CardTree(
+                                model: state.favorites[index],
+                              );
+                      });
+                } else if (state is FavoriteError) {
+                  return SizedBox();
+                }
+                return SizedBox();
+              },
+            ),
+```
