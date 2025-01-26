@@ -340,7 +340,7 @@ BlocProvider(
 Если нужно сразу заполнить данные то 
 
 ```dart
-Future<void> populateDatabase(FavoriteRepository favoriteRepository) async {
+Future<void> loadDatabase(FavoriteRepository favoriteRepository) async {
   final dataSQL = await favoriteRepository.getAll();
 
   if (dataSQL.isEmpty) {
