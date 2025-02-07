@@ -332,9 +332,11 @@ Text.rich(TextSpan(
 Подключаем bloc так
 ```dart
 ...
-BlocProvider(
-      create: (context) => FavoriteBloc(FavoriteRepository()),
-      child: ...
+MultiBlocProvider(
+        providers: [
+          BlocProvider(create: (context) => DataBloc(DataRepository())),
+        ],
+        child: 
 ```
 
 Если нужно сразу заполнить данные то 
