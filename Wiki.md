@@ -401,3 +401,9 @@ WillPopScope(
 ...
 )
 ```
+или в навигации
+```dart
+Get.to(FillingPage(),
+        fullscreenDialog: true,
+        transition: Transition.rightToLeft);
+```
