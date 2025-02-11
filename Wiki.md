@@ -392,3 +392,12 @@ Future main() async {
               },
             ),
 ```
+
+
+## Отключение свайпа на айфонах
+```dart
+WillPopScope(
+      onWillPop: () async => false,
+...
+)
+```
