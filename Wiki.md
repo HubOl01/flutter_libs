@@ -407,3 +407,8 @@ Get.to(FillingPage(),
         fullscreenDialog: true,
         transition: Transition.rightToLeft);
 ```
+
+## Рандом чисел
+```dart
+Random().nextInt(sets.length - 1)
+```
