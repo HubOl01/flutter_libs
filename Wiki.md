@@ -412,3 +412,8 @@ Get.to(FillingPage(),
 ```dart
 Random().nextInt(sets.length - 1)
 ```
+
+## Смешивание списка
+```dart
+List.from(widget.level.questions)..shuffle();
+```
