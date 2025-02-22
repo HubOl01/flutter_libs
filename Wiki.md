@@ -417,3 +417,48 @@ Random().nextInt(sets.length - 1)
 ```dart
 List.from(widget.level.questions)..shuffle();
 ```
+
+## Cupertino notific dialog
+
+```dart
+void showNotificDialog(BuildContext context) async {
+  return await showCupertinoDialog<void>(
+    context: context,
+    builder: (BuildContext context) => CupertinoTheme(
+      data: CupertinoThemeData(
+        brightness: Brightness.dark,
+      ),
+      child: CupertinoAlertDialog(
+        title:
+            Text('“LetGo: Make it good” Would Like to Send You Notifications'),
+        content: Text(
+            "Notifications can include alerts, sounds, and icons. You can customize them in Settings."),
+        actions: <CupertinoDialogAction>[
+          CupertinoDialogAction(
+            isDestructiveAction: true,
+            textStyle: TextStyle(color: blueDialogColor),
+            onPressed: () {
+              isShowOnboarding = true;
+              showOnboarding(false);
+              Get.back();
+              Get.offAll(const MainPage());
+            },
+            child: const Text('Don\'t allow'),
+          ),
+          CupertinoDialogAction(
+            isDefaultAction: true,
+            textStyle: TextStyle(color: blueDialogColor),
+            onPressed: () {
+              isShowOnboarding = true;
+              showOnboarding(false);
+              Get.back();
+              Get.offAll(const MainPage());
+            },
+            child: const Text('OK'),
+          ),
+        ],
+      ),
+    ),
+  );
+}
+```
