@@ -6,6 +6,8 @@ flutter pub add <plugin>
 ```
 
 ## Полный шаблон pubspec.yaml
+https://docs.flutter.dev/cookbook/design/fonts
+
 с примерами fonts
 [pubspec.yaml](templates/pubspec.yaml)
 
