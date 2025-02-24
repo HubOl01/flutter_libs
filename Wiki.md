@@ -405,7 +405,9 @@ WillPopScope(
 ```dart
 Get.to(FillingPage(),
         fullscreenDialog: true,
-        transition: Transition.rightToLeft);
+	duration: Duration(milliseconds: 300),
+	transition: Transition.rightToLeft
+);
 ```
 
 ## Рандом чисел
