@@ -409,6 +409,10 @@ Get.to(FillingPage(),
 	transition: Transition.rightToLeft
 );
 ```
+Если есть конфликт с flutter_bloc, то
+```dart
+import 'package:flutter_bloc/flutter_bloc.dart' hide Transition;
+```
 
 ## Рандом чисел
 ```dart
