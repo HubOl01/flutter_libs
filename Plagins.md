@@ -8,6 +8,8 @@ flutter pub add <plugin>
 ## Полный шаблон pubspec.yaml
 https://docs.flutter.dev/cookbook/design/fonts
 
+По поводу fonts, по умолчанию стоит SF Pro, SF Pro Display надо отдельно скачивать.
+
 с примерами fonts
 [pubspec.yaml](templates/pubspec.yaml)
 
